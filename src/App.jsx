@@ -1,13 +1,18 @@
 import { useState } from 'react'
 import './App.css'
 import Banner from './components/Banner'
+import ComponentA from './components/ComponentA';
+import ComponentB from './components/ComponentB';
 
 function App() {
+  const [nombor, setNombor] = useState(10)
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Banner />
+      <ComponentA nombor={nombor}/>
+      <ComponentB/>
+      <Banner/>
       <h1>Vite + React</h1>
       <div className="card">
         {/*below is an example of styling in jsx*/}

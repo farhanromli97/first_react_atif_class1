@@ -2,7 +2,7 @@ import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 
 const Banner = () => {
-    const haiwans = ["harimau", "kucing", "burung", "tikus"]
+    const haiwans = ["harimau", "burung", "kucing", "tikus", "singa"]
     // need to read about Truthy and Falsy values
     const isTrue = true;
     return (
