@@ -3,20 +3,41 @@ import './App.css'
 import Banner from './components/Banner'
 import ComponentA from './components/ComponentA';
 import ComponentB from './components/ComponentB';
+import ComponentC from './components/ComponentC';
 
 function App() {
   const [nombor, setNombor] = useState(10)
   const [count, setCount] = useState(0)
 
+
+  const handleCount = () => {
+    setCount(count + 1)
+  }
+
+  const handleNombor = (num) => {
+    setNombor(nombor + num)
+  }  
+
+
+
+  
+
   return (
     <>
-      <ComponentA nombor={nombor}/>
-      <ComponentB/>
+      <ComponentA staticNumber={20}/>
+      <ComponentB number={nombor} func={handleNombor} />
+      <h2>Count: {nombor}</h2>
+      <ComponentC objekSaya={{
+        nama: "Farhan",
+        umur: 26
+      }}/>
+
       <Banner/>
+      
       <h1>Vite + React</h1>
       <div className="card">
         {/*below is an example of styling in jsx*/}
-        <button style={{backgroundColor: "red", border: "2px solid green"}} onClick={() => setCount((count) => count + 1)}>
+        <button style={{backgroundColor: "red", border: "2px solid green"}} onClick={handleCount}>
           count is {count}
         </button>
         <p>
